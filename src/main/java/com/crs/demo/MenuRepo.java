@@ -25,5 +25,8 @@ public interface MenuRepo extends JpaRepository<MenuMasterEntity, Long>{
 	@Query(value="delete from menu_list where catid in ?1",nativeQuery = true)
 	public void deleteIn(List<Integer> ids);
 
+		@Query(value="delete from menu_list where catid in ?1",nativeQuery = true)
+	public void deleteInd(List<Integer> ids);
+
 	
 }
